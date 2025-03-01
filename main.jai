@@ -24,9 +24,10 @@ main :: () {
 			exit(1);
 		}
 
-		print("Simulating %...\n\n", arg);
+		print("Simulating %...\n", arg);
 		program := parse_src(content);
 		simulate_program(program);
+		putchar(#char "\n"); // Flush STDOUT
 		
 		free(content);
 	}

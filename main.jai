@@ -29,6 +29,7 @@ main :: () {
 		simulate_program(program);
 		putchar(#char "\n"); // Flush STDOUT
 		
+		free(program.data);
 		free(content);
 	}
 }
